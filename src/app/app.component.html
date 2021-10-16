@@ -1,0 +1,13 @@
+<h3>Formulário</h3>
+
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+  <label>Nome: 
+    <input formControlName="name"/>
+  </label>
+  <label>Endereço: 
+    <input formControlName="endereco"/>
+  </label>
+  <input [disabled]="myForm.status != 'VALID'" type="submit" value="Salvar">
+</form>
+
+<p>Status do formulário {{myForm.status}}</p>
